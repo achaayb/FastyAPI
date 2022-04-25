@@ -1,28 +1,28 @@
 from fastapi import FastAPI
 
-from routers.public.foo import router as foo
-from routers.public.bar import router as bar
+import docs_metadata
 
-tags_metadata = [
-    {
-        "name": "root",
-        "description": "root endpoints",
-    },
-    {
-        "name": "foo",
-        "description": "first route endpoints",
-    },
-    {
-        "name": "bar",
-        "description": "second route endpoints"
-    }
-]
-
-app = FastAPI(openapi_tags=tags_metadata)
-app.include_router(foo)
-app.include_router(bar)
+from routers.routeGroup1.foo import router as foo
+from routers.routeGroup2.bar import router as bar
 
 
-@app.get("/", tags=["root"])
-def root():
+app = FastAPI(
+    title="achaayb FastAPI boilerplate",
+    description=docs_metadata.description,
+    openapi_tags=docs_metadata.tags)
+
+app.include_router(foo, prefix="/foo", tags=["foo"])
+app.include_router(bar, prefix="/bar", tags=["bar"])
+
+@app.on_event("startup")
+async def startup():
+    pass
+
+
+@app.on_event("shutdown")
+async def shutdown():
+    pass
+
+@app.get("/", tags=["root"], summary="main root endpoint, use to serve app.")
+async def root():
     return {"message": "root"}
