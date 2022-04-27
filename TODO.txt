@@ -1,0 +1,4 @@
+[] endpoints testing
+[x] user protection
+[] socketio implementation
+[] metamask auth
