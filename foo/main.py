@@ -6,4 +6,4 @@ router = APIRouter(
 
 @router.get("/", summary="GET users")
 async def root():
-    {"message" : "available"}
+    return {"message" : "available"}
