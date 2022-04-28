@@ -5,8 +5,7 @@
     </head>
     <body>
         <h1>WebSocket Chat</h1>
-        <button onClick="showForm(event)" id="connect">Connect</button>
-        <form action="" onsubmit="sendMessage(event)" id="form" style="display: none">
+        <form action="" onsubmit="sendMessage(event)" id="form">
             <input type="text" id="messageText" autocomplete="off"/>
             <button>Send</button>
         </form>
@@ -14,7 +13,7 @@
         </ul>
         <script>
             var clientID = Date.now();
-            var ws = new WebSocket(`ws://localhost:8000/ws/ws`);
+            var ws = new WebSocket(`ws://localhost:8000/chat/ws`);
 
             function processMessage(event) {
                 var messages = document.getElementById('messages')
@@ -32,13 +31,6 @@
                 ws.send(input.value);
                 input.value = ''
                 event.preventDefault()
-            }
-
-            function showForm(event) {
-                var button = document.getElementById("connect");
-                var form = document.getElementById("form");
-                button.style.display = "none";
-                form.style.display = "block";
             }
 
         </script>

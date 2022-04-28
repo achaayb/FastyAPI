@@ -5,7 +5,7 @@ from foo.config import metadata
 from foo.main import router as RootRouter
 from foo.routers.auth import router as AuthRouter
 from foo.routers.user import router as UserRouter
-from foo.routers.websocket import router as WebSocketRouter
+from foo.routers.chat import router as ChatRouter
 
 from foo.helpers.response import ErrorException
 
@@ -29,7 +29,7 @@ def error_exception_handler(request: Request, exc: ErrorException):
 app.include_router(AuthRouter, prefix="/auth", tags=[""])
 app.include_router(RootRouter, tags=["root"])
 app.include_router(UserRouter, prefix="/user", tags=["user"])
-app.include_router(WebSocketRouter, prefix="/ws")
+app.include_router(ChatRouter, prefix="/chat")
 
 @app.on_event("startup")
 async def startup():
