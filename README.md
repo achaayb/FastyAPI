@@ -55,7 +55,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-FastyAPI is a FastAPI based Stack boilerplate designes for heavy workloads and simple developement in mind.
+FastyAPI is a FastAPI based Stack boilerplate designed for heavy workloads and simple developement in mind.
 
 Here's why:
 * FastAPI provides such a great developement experience due to its simple structure and the auto generated docs.
