@@ -39,15 +39,14 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#environment-setup">Environment setup</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#running-and-testing">Running and testing</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -56,10 +55,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-FastCelery is a FastAPI based Stack boilerplate designes for heavy workloads and simple developement in mind.
+FastyAPI is a FastAPI based Stack boilerplate designes for heavy workloads and simple developement in mind.
 
 Here's why:
-* FastAPI in itself provides such a great developement experience due to its simple structure and the auto generated docs.
+* FastAPI provides such a great developement experience due to its simple structure and the auto generated docs.
 * we've improves this further by providing you with a simple design pattern, no subfolders <3
 * every Stack element is carefully chosen and tested/optimised against heavy workloads
 * boiletplate code for different situations, websocket, crud etc.. yet without bloat.
@@ -76,10 +75,10 @@ Our stack is as follows
 * [Celery](https://docs.celeryq.dev/) **soon** + optional
 * [Flower](https://flower.readthedocs.io/en/latest/) **soon** + optional
 * [Redis](https://redis.io/) is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker
-* [Motor](https://motor.readthedocs.io) presents a coroutine-based API for non-blocking access to MongoDB
+* [Motor](https://motor.readthedocs.io/) presents a coroutine-based API for non-blocking access to MongoDB
 * [MongoDB](https://svelte.dev/) is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
 	* **Sharding** is the process of storing data records across multiple machines and it is **MongoDB**'s approach to meeting the demands of data growth.
-* [Docker]() **container** is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
+* [Docker](https://www.docker.com/) **container** is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -88,7 +87,7 @@ Our stack is as follows
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Set of instructions to get started with FastCelery Stack boilerplate
+Set of instructions to get started with FastyAPI
 
 ### Prerequisites
 
@@ -161,7 +160,7 @@ Set of instructions to get started with FastCelery Stack boilerplate
 	- [ ] Cpu bound operations test (fork)
 - [ ] Docker
 
-See the [open issues](https://github.com/achaayb/FastCelery-Boilerplate/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/achaayb/FastyAPI/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -192,6 +191,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-Project Link: [https://github.com/achaayb/FastCelery-Boilerplate](https://github.com/achaayb/FastCelery-Boilerplate)
+Project Link: [https://github.com/achaayb/FastyAPI](https://github.com/achaayb/FastyAPI)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
