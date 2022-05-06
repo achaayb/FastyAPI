@@ -1,28 +1,18 @@
-description = """
-
-## FastAPI boilerplate for production needs.
-
-<details>
-<summary>TODO</summary>
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
-</details>
-
+"""TODO [] Docs metadata
+- Description:
+    - Notes
+    - Docs
+- Tags:
+    - Endpoint Groups tags.
 """
 
-tags = [
-{
-        "name": "root",
-        "description": "root endpoints",
-    },{
-        "name": "user",
-        "description": "users control"
-    }
+description = ""
+tags = [{
+            "name": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "description": ""
+        }
 ]

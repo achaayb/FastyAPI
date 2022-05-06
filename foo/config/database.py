@@ -1,10 +1,13 @@
+from os import environ
 import motor.motor_asyncio
 
-MONGO_DETAILS = "mongodb://localhost:27017"
+MONGO_DETAILS = environ['MONGO_URI']
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 
-database = client.FastAPI
+database = client[environ['MONGO_DATABASE']]
 
 debug_collection = database.get_collection("debug")
-user_collection = database.get_collection("users")
+bocal_collection = database.get_collection("bocal")
+crud_collection = database.get_collection("crud")
+users_collection = database.get_collection("users")

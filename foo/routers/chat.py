@@ -1,7 +1,6 @@
 from fastapi import APIRouter, WebSocket, Depends, WebSocketDisconnect
 from ..helpers.response import Response, Error
-from ..crud import user as user_crud
-from ..models import user as user_models
+from ..models import users as users_models
 from ..dependencies import auth as auth_dependencies
 
 from bson import ObjectId
@@ -13,7 +12,9 @@ router = APIRouter(
 
 class ConnectionManager:
     def __init__(self):
-        self.connections: List[WebSocket] = [] #dumb to use it like this in prod.
+        #dumb to use it like this in prod.
+        #use redis or something idk, wait for next push.
+        self.connections: List[WebSocket] = []
 
     async def connect(self, websocket: WebSocket):
         await websocket.accept()
