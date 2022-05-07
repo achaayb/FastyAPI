@@ -1,13 +1,10 @@
 from fastapi import APIRouter, WebSocket, Depends, WebSocketDisconnect
 from ..helpers.response import Response, Error
-from ..models import users as users_models
-from ..dependencies import auth as auth_dependencies
 
 from bson import ObjectId
 
 router = APIRouter(
     responses={404: {"description": "Not found"}},
-    dependencies = [Depends(auth_dependencies.JWT_protect)]
 )
 
 class ConnectionManager:
@@ -19,6 +16,7 @@ class ConnectionManager:
     async def connect(self, websocket: WebSocket):
         await websocket.accept()
         self.connections.append(websocket)
+        print(websocket)
 
     async def broadcast(self, data: str):
         for connection in self.connections:

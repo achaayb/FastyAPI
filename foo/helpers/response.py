@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-def Response(data, message = 'N/A'):
+def Response(data, message='N/A'):
     return {
         "data": data,
         "code": "success",

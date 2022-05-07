@@ -25,9 +25,11 @@ from typing import List, Optional
 """
 class Crud(BaseModel):
     id: str = Field(alias='_id') #workaround pydantic _var
-    key1: str
-    key2: str
-    key3: str
+    key1: Optional[str]
+    key2: Optional[str]
+    key3: Optional[str]
+class ID(BaseModel):
+        id: str = Field(alias='_id')
 
 """RESPONSE MODELS
     define response models
@@ -45,11 +47,11 @@ class RES_GET_ID(BaseModel):
     code: str
     message: str
 class RES_PATCH_ID(BaseModel):
-    code: str
+    data: Crud
     code: str
     message: str
 class RES_DELETE_ID(BaseModel):
-    data: str
+    data: ID
     code: str
     message: str
 

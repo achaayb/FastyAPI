@@ -1,14 +1,14 @@
 #crud route Boilerplate
 
-"""TODO [] Smart returns
+"""TODO [x] Smart returns
     - Smart returns. return database values without database reading
     - EX: on a success edit, return new values directly from input if update succeeds
     - this reduces database stress
     - return nothing for now
     - Smart returns standarts
-        - POST: return inserted data
-        - DELETE: return deleted _id
-        - PATCH: return _id and updated valued
+        [x] POST: return inserted data
+        [x] DELETE: return deleted _id
+        [x] PATCH: return _id and updated valued
 """
 
 """TODO [] Crud metadata
@@ -67,18 +67,20 @@ async def add(request: crud_models.REQ_POST_):
     #cast request class to dict
     #asign values to dict //request['key'] = value
     foo = await crud_collection.insert_one(request.dict())
-    return Response(str(foo.inserted_id),"User inserted successfully") if foo.inserted_id else Error("User insertion failed")
+    return Response(str(request.dict()),"User inserted successfully") if foo.inserted_id else Error("User insertion failed")
 
 @router.delete("/{id}", summary="hard delete record", response_model=crud_models.RES_DELETE_ID)
 async def delete(id: str):
     #safcasting insures a valid objectid or None
     foo = await crud_collection.delete_one({"_id": safe_objectid(id)})
-    return Response("","User deleted") if foo.deleted_count else Error("User delete failed")
+    return Response({"_id": id},"User deleted") if foo.deleted_count else Error("User delete failed")
 
 @router.patch("/{id}", summary="patch record", response_model=crud_models.RES_PATCH_ID)
 async def patch(id: str,data: crud_models.REQ_PATCH_ID):
     #exclude_unset ignores keys with non given values
     #if not set, $set will update values to None
+    bar = data.dict(exclude_unset=True)
     foo = await crud_collection.update_one({ "_id" : safe_objectid(id)},
-                                            {"$set": data.dict(exclude_unset=True)})
-    return Response("","User patched") if foo.modified_count else Error("User patch failed")
+                                            {"$set": bar})
+    bar['_id'] = id
+    return Response(bar,"User patched") if foo.modified_count else Error("User patch failed")
