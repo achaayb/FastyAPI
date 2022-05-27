@@ -119,15 +119,15 @@ Set of instructions to get started with FastyAPI
    ```sh
    gunicorn app:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:5000
    ```
-4. test the app
+4. api test
 	* navigate to : http://localhost:5000
 	* response should be something like this :
 		```json
 	   {"data":"","code":"success","message":"FastyAPI live!"}
 		```
-  * docs : http://localhost:5000/docs
-  * you should see the swaggers api documentation
-  * websocket client test
+5. swaggers docs
+  * navigate to : http://localhost:5000/docs
+4. websocket test
   * **username** : http://localhost:5000/static/test1.html
   * **username2** : http://localhost:5000/static/test2.html
 
