@@ -72,6 +72,18 @@ Our stack is as follows
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Features
+
+- [x] Auto generated Swagger Documentation
+- [x] MongoDB crud with smart returns
+- [x] JWT authentication
+- [x] WebSocket cross-server private and broadcast
+- [ ] Celery and Flower
+- [ ] Unit testing
+- [ ] Application and Server health graphs
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Getting Started
 
 Set of instructions to get started with FastyAPI
