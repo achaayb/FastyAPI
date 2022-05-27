@@ -35,6 +35,9 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
+	<li><a href="#built-with">Built with</a></li> 
+	<li><a href="#features">Features</a></li> Getting Started
+	<li><a href="#getting-started">Getting Started</a></li>
         <li><a href="#environment-setup">Environment setup</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#running-and-testing">Running and testing</a></li>
