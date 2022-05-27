@@ -126,10 +126,10 @@ Set of instructions to get started with FastyAPI
 	   {"data":"","code":"success","message":"FastyAPI live!"}
 		```
 5. swaggers docs
-  * navigate to : http://localhost:5000/docs
+  	* navigate to : http://localhost:5000/docs
 4. websocket test
-  * **username** : http://localhost:5000/static/test1.html
-  * **username2** : http://localhost:5000/static/test2.html
+  	* **username** : http://localhost:5000/static/test1.html
+  	* **username2** : http://localhost:5000/static/test2.html
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
