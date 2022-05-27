@@ -102,15 +102,15 @@ Set of instructions to get started with FastyAPI
 
 ### Prerequisites
 
-* [Python3]([https://www.python.org/downloads/](https://computingforgeeks.com/how-to-install-python-3-on-centos/))
+* [Python3](https://www.python.org/downloads/](https://computingforgeeks.com/how-to-install-python-3-on-centos)
 * pip3
 * venv
 	```sh
    pip3 install virtualenv
    ```
 * [CentOS preferably](https://www.centos.org/centos-linux)
-* [MongoDB installed](https://phoenixnap.com/kb/install-mongodb-on-centos-8)
-* [Redis installed](https://www.linode.com/docs/guides/install-and-configure-redis-on-centos-7)
+* [MongoDB](https://phoenixnap.com/kb/install-mongodb-on-centos-8)
+* [Redis](https://www.linode.com/docs/guides/install-and-configure-redis-on-centos-7)
 
 ### Environment setup
 
