@@ -15,6 +15,8 @@
     <br />
     <br />
     <a href="#">View Demo</a>
+    .
+    <a href="#donations">Donations</a>
     ·
     <a href="#">Report Bug</a>
     ·
@@ -44,6 +46,7 @@
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#donations">Donations</a></li>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
@@ -182,6 +185,12 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Donations
+
+If this project was useful or you believe its interesting, feel free to donate ❤️
+
+Paypal Link : [Paypal.me](https://paypal.me/pseudorox)
 
 ## License
 
