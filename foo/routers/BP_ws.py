@@ -32,10 +32,11 @@
 """
 
 """DOCS
-    UID : https://docs.python.org/3/library/uuid.html#uuid.uuid4
+    [to reconsider] UID : https://docs.python.org/3/library/uuid.html#uuid.uuid4
     REDIS DATA TYPES : https://redis.io/docs/manual/data-types/
     REDIS CONTROL : https://redis.io/commands/
-    SHUTDOWN : https://stackoverflow.com/questions/68018314/how-do-you-trigger-app-on-eventshutdown-for-fastapi-with-uvicorn
+    [to urgently do] https://redis.io/docs/manual/security/
+    [to implement] SHUTDOWN : https://stackoverflow.com/questions/68018314/how-do-you-trigger-app-on-eventshutdown-for-fastapi-with-uvicorn
 """
 
 from fastapi import APIRouter, WebSocket, Depends, WebSocketDisconnect
