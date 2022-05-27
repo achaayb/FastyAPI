@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+import json
 
 def Response(data, message='N/A'):
     return {
@@ -14,3 +15,5 @@ class ErrorException(Exception):
 def Error(message = 'N/A'):
     raise ErrorException(message)
 
+def Error_ws(message = 'N/A'):
+    return f'{{"code": "error", "message": "{message}"}}'

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FastyAPI websocket</title>
+    </head>
+    <body>
+        <h1>JSON Communication</h1>
+        <ul>
+            <li>Connected user : username (from JWT)</li>
+            <li><b>Broadcast : </b>{"type": "broadcast", "data": {"message": "dasdas"}}</li>
+            <li><b>Private   : </b>{"type": "private" ,"data": {"uid": "username", "message": "dasdsd"}}</li>
+        </ul>
+        <form action="" onsubmit="sendMessage(event)" id="form">
+            <input type="text" id="messageText" autocomplete="off"/>
+            <button>Send</button>
+        </form>
+        <ul id='messages'>
+        </ul>
+        <script>
+            var clientID = Date.now();
+            var ws = new WebSocket(`ws://localhost:8000/chat/ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJfaWRcIjogXCI2MjgyZDk0ZTllZTc2ODQzMjc4OTlkNWNcIiwgXCJ1c2VybmFtZVwiOiBcInVzZXJuYW1lXCJ9IiwiaWF0IjoxNjUyODI5MDcxLCJuYmYiOjE2NTI4MjkwNzEsImp0aSI6IjFhNzcyZWIzLTAzYzItNDViOS1iZWQ3LTljOWJkZWExYjQ3ZSIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.PK_zg0jd4_LbaOkRJbVcUAP8CYlPXma852RvUfJPtz8nN6WeGRVxkPu6nxcJyqPK1hTsNlnlVD3Q7b3YWJRI9w`);
+
+            function processMessage(event) {
+                var messages = document.getElementById('messages')
+                var message = document.createElement('li')
+                console.log(event.data)
+                var content = document.createTextNode(event.data)
+                message.appendChild(content);
+                messages.appendChild(message);
+            }
+
+            ws.onmessage = processMessage;
+
+            function sendMessage(event) {
+                var input = document.getElementById("messageText")
+                ws.send(input.value);
+                input.value = ''
+                event.preventDefault()
+            }
+
+        </script>
+    </body>
+</html>

@@ -18,7 +18,7 @@
 """
 
 """TODO [] Testing
-    - [] manual
+    - [x] manual
     - [] automated
 """
 
@@ -29,7 +29,7 @@
 """
 
 from fastapi import APIRouter, Depends, Request
-from ..config.database import crud_collection
+from ..databases.mongo import crud_collection
 from ..helpers.response import Response, Error
 from ..helpers.misc import safe_objectid
 from ..models import BP_crud as crud_models
@@ -38,7 +38,6 @@ from bson import ObjectId
 router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
-
 
 @router.get("/", summary="retrieve all records", response_model=crud_models.RES_GET_)
 async def get_all():
@@ -62,12 +61,15 @@ async def get_one(id: str):
         return Response(foo,"User fetched")
     Error("User fetch failed")
 
+
 @router.post("/", summary="insert record", response_model=crud_models.RES_POST_)
 async def add(request: crud_models.REQ_POST_):
     #cast request class to dict
     #asign values to dict //request['key'] = value
     foo = await crud_collection.insert_one(request.dict())
-    return Response(str(request.dict()),"User inserted successfully") if foo.inserted_id else Error("User insertion failed")
+    bar = request.dict()
+    bar['_id'] = str(foo.inserted_id)
+    return Response(str(bar),"User inserted successfully") if foo.inserted_id else Error("User insertion failed")
 
 @router.delete("/{id}", summary="hard delete record", response_model=crud_models.RES_DELETE_ID)
 async def delete(id: str):

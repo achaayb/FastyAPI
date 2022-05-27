@@ -1,4 +1,4 @@
-from fastapi import Depends, HTTPException
+from fastapi import Depends, HTTPException, WebSocket
 from ..helpers.response import Response, Error , ErrorException
 
 from fastapi_jwt_auth import AuthJWT

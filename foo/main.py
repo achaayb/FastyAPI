@@ -5,6 +5,6 @@ router = APIRouter(
     responses={404: {"description": "Not found"}}
 )
 
-@router.get("/", summary="GET users")
+@router.get("/", summary="API test")
 async def root():
     return Response("","FastyAPI live!")
