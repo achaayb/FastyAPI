@@ -1,6 +1,5 @@
 
 <div id="top"></div>
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="#">
@@ -23,7 +22,6 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -74,7 +72,6 @@ Our stack is as follows
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
 Set of instructions to get started with FastyAPI
@@ -85,51 +82,64 @@ Set of instructions to get started with FastyAPI
 * pip3
 * venv
 	```sh
-   pip3 install --user virtualenv
+   pip3 install virtualenv
    ```
-* CentOS (preferable) / Ubuntu
-* MongoDB installed
-* Redis installed
+* [CentOS preferably](https://www.centos.org/centos-linux)
+* [MongoDB installed](https://phoenixnap.com/kb/install-mongodb-on-centos-8)
+* [Redis installed](https://www.linode.com/docs/guides/install-and-configure-redis-on-centos-7)
+
 ### Environment setup
 
-1. Create the environment
+1. Create the project environment directory
    ```sh
+   mkdir project_name
+   ```
+2. Create the environment
+   ```sh
+   cd project_name
    python3 -m virtualenv .
    ```
-2. Activate the environment
+3. Activate the environment
    ```sh
    source bin/activate
    ```
 
 ### Installation
 
-1. Clone the repo
+4. Clone the repo
    ```sh
    git clone https://github.com/achaayb/FastyAPI
    ```
-2. Install the dependencies
+5. Install the dependencies
    ```sh
    cd FastyAPI 
    pip3 install -r requirements.txt
    ```
- 
- ### Running and testing
+6. Configure [.env](https://github.com/achaayb/FastyAPI/blob/master/.env) to your need
+	* better configuration soon
+	* please run mongo and redis on your local machine **for now**
 
-3. run FastyAPI on gunicorn with uvicorn workers
+### Running and testing
+
+7. run FastyAPI on gunicorn with uvicorn workers
    ```sh
    gunicorn app:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:5000
    ```
-4. api test
+8. api test
 	* navigate to : http://localhost:5000
 	* response should be something like this :
 		```json
 	   {"data":"","code":"success","message":"FastyAPI live!"}
 		```
-5. swaggers docs
+9. swaggers docs
   	* navigate to : http://localhost:5000/docs
-4. websocket test
+10. websocket test
   	* **username** : http://localhost:5000/static/test1.html
   	* **username2** : http://localhost:5000/static/test2.html
+ 
+ ### Minify the boilerplate to your needs
+ 
+ 11. **soon**
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -137,9 +147,6 @@ See the [open issues](https://github.com/achaayb/FastyAPI/issues) for a full lis
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -155,9 +162,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
