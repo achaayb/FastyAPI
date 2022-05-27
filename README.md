@@ -74,10 +74,16 @@ Our stack is as follows
 
 ### Features
 
-- [x] Auto generated Swagger Documentation
-- [x] MongoDB crud with smart returns
-- [x] JWT authentication
-- [x] WebSocket cross-server private and broadcast
+- ✔️	Fully done
+- ⌛ 	Needs Tweaks
+
+- [x] [✔️] Auto generated Swagger Documentation
+- [x] [✔️] http input validation
+- [x] [✔️] MongoDB crud with smart returns
+- [x] [✔️⌛] JWT authentication
+- [x] [✔️⌛] WebSocket cross-server private and broadcast
+- [ ] WebSocket http protocols implementation (GET/POST/PATCH/DELETE)
+- [ ] [⌛] WebSocket json input validation
 - [ ] Celery and Flower
 - [ ] Unit testing
 - [ ] Application and Server health graphs
