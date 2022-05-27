@@ -102,7 +102,7 @@ Set of instructions to get started with FastyAPI
 
 ### Prerequisites
 
-* [Python3](https://www.python.org/downloads/](https://computingforgeeks.com/how-to-install-python-3-on-centos)
+* [Python3](https://computingforgeeks.com/how-to-install-python-3-on-centos)
 * pip3
 * venv
 	```sh
