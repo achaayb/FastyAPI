@@ -39,7 +39,7 @@ class RES_GET_(BaseModel):
     code: str
     message: str
 class RES_POST_(BaseModel):
-    data: Crud
+    data: str
     code: str
     message: str
 class RES_GET_ID(BaseModel):
