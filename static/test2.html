@@ -18,7 +18,7 @@
         </ul>
         <script>
             var clientID = Date.now();
-            var ws = new WebSocket(`ws://localhost:8000/chat/ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJfaWRcIjogXCI2MjhlNDYwODRiN2RjOGZmODBiMGQ5Y2RcIiwgXCJ1c2VybmFtZVwiOiBcInVzZXJuYW1lMlwifSIsImlhdCI6MTY1MzUxMjU1NSwibmJmIjoxNjUzNTEyNTU1LCJqdGkiOiIwZmExMGY4OC1mNWNiLTQ3ZTAtODY1My03ZjMwZWVlZDA2ZjEiLCJ0eXBlIjoiYWNjZXNzIiwiZnJlc2giOmZhbHNlfQ.Kwp2kPfZvNuLAfdPia1E8-U16CyN6icChEC32fUyY3zc7M5bJ_QyaiotptMmKqy6sp9JAl7H5Pl8bUyqq953Lw`);
+            var ws = new WebSocket(`ws://localhost:5000/chat/ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJfaWRcIjogXCI2MjhlNDYwODRiN2RjOGZmODBiMGQ5Y2RcIiwgXCJ1c2VybmFtZVwiOiBcInVzZXJuYW1lMlwifSIsImlhdCI6MTY1MzUxMjU1NSwibmJmIjoxNjUzNTEyNTU1LCJqdGkiOiIwZmExMGY4OC1mNWNiLTQ3ZTAtODY1My03ZjMwZWVlZDA2ZjEiLCJ0eXBlIjoiYWNjZXNzIiwiZnJlc2giOmZhbHNlfQ.Kwp2kPfZvNuLAfdPia1E8-U16CyN6icChEC32fUyY3zc7M5bJ_QyaiotptMmKqy6sp9JAl7H5Pl8bUyqq953Lw`);
 
             function processMessage(event) {
                 var messages = document.getElementById('messages')
